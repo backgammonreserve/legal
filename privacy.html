@@ -53,7 +53,7 @@
   <p class="brand"><a href="index.html">Backgammon Reserve</a></p>
 <h1>Privacy Policy — Backgammon Reserve</h1>
 <p><strong>Effective: May 20, 2026</strong>
-<strong>Last updated: July 10, 2026</strong></p>
+<strong>Last updated: October 8, 2026</strong></p>
 <p>This policy describes what data Backgammon Reserve collects, how it's used,
 and the choices you have about it. The policy is written to be readable; if
 anything is unclear, email <strong>backgammonreserve@gmail.com</strong> and we'll explain.</p>
@@ -94,6 +94,13 @@ configured to ask only for your email.</p>
 <li><strong>Avatar image (optional)</strong> — If you choose to set a profile photo, it is
   stored on your device and uploaded to our backend so it can follow you to
   a new device. Your avatar is visible to other players, like your username.</li>
+<li><strong>Country (optional)</strong> — A small flag beside your username. It starts as
+  the country of the Apple account you use for the App Store, which the app
+  reads from Apple when you first sign in. That is not a location reading:
+  someone living abroad on a home-country account shows their home country.
+  You can change it, or choose to show no flag, from your Profile at any
+  time. Your country is visible to other players, like your username;
+  choosing to show no flag removes it from our backend.</li>
 <li><strong>Match outcomes, ratings, and history</strong> — Stored on your device and on
   our backend so your stats and history persist and (once real online play
   ships) so opponents can be matched and rated.</li>
@@ -110,7 +117,8 @@ configured to ask only for your email.</p>
 <p>We do not collect or access: your location, microphone, contacts,
 Bluetooth, calendar, health data, payment information, IP-address-derived
 location, device advertising identifier, browsing history, or analytics
-about how you use the app.</p>
+about how you use the app. (The country flag above comes from your App
+Store account, not from your location.)</p>
 <p>Apple's App Store Connect summary of our data practices is:</p>
 <div class="table-wrap"><table>
 <thead>
@@ -158,6 +166,12 @@ about how you use the app.</p>
 <td>Yes</td>
 <td>No</td>
 </tr>
+<tr>
+<td>Location</td>
+<td>Coarse Location (country flag, optional)</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
 </tbody>
 </table></div>
 <p>That's the entire summary.</p>
@@ -175,7 +189,8 @@ training machine-learning models.</p>
 <p><strong>Nobody, beyond what's necessary to operate the app.</strong></p>
 <ul>
 <li>Other players in the app can see your <strong>username</strong>, your <strong>rating</strong>,
-  your <strong>avatar</strong>, and your <strong>public match history</strong>. That's the whole
+  your <strong>avatar</strong>, your <strong>country flag</strong> (if you show one), and your
+  <strong>public match history</strong>. That's the whole
   point of usernames in a competitive app.</li>
 <li>Apple receives the data you'd normally share with them anyway (Sign in
   with Apple identifier, TestFlight crash reports if you opt in).</li>
@@ -194,8 +209,8 @@ training machine-learning models.</p>
   Application Support directory, protected by iOS sandboxing and by your
   device passcode if you've set one. The app reads this cache first so it
   works instantly and offline.</li>
-<li><strong>On our backend (Supabase)</strong>: your username, rating, avatar, and match
-  history. Access is governed by row-level security: these public profile
+<li><strong>On our backend (Supabase)</strong>: your username, rating, avatar, country
+  (if you show one), and match history. Access is governed by row-level security: these public profile
   fields are readable by other signed-in players (so they can find you and
   see leaderboards). Your email is held by our authentication provider for
   account management and is not exposed to other players. Supabase hosts
